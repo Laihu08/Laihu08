@@ -5,7 +5,8 @@
 🛠 Open-Source Contributor | Passionate about AI & Embedded Tech  
 
 ## 🔥 Current Projects  
-- 🛠 Contributing to Open-Source AI & IoT  
+- 🛠 Contributing to Open-Source AI & IoT
+- NLP, DeepLearning, Multi agent AI, Fine-tune LLM, LangGraph, RAG & CAG
 - 📚 Weekly ML Research & Open-Source Contributions  
 
 ## 🌍 Connect With Me  
