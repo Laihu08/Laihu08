@@ -1,7 +1,7 @@
-# 🚀 Rahul Selvaraj | Senior Software Engineer  
+# 🚀 Rahul Selvaraj | AI Engineer  
 
 🏆 2x Patent Holder | ML, IoT 
-💡 Innovating electric wheelchairs at **Karma Medical**  
+💡 Innovating electric wheelchairs at **BizLink Groups**  
 🛠 Open-Source Contributor | Passionate about AI & Embedded Tech  
 
 ## 🔥 Current Projects  
