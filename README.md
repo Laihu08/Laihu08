@@ -97,32 +97,36 @@
 
 <table>
   <tr>
-    <td width="44"><img alt="NVIDIA" src="assets/logos/nvidia.svg" width="36" height="36"></td>
-    <td><b>AI Infrastructure and Operations Fundamentals</b><br><sub>NVIDIA</sub></td>
+    <th>Issuer</th>
+    <th>Certification</th>
   </tr>
   <tr>
-    <td width="44"><img alt="Robert H. Smith School of Business" src="assets/logos/umd-smith.svg" width="36" height="36"></td>
-    <td><b>AI and Career Empowerment</b><br><sub>Robert H. Smith School of Business</sub></td>
+    <td align="center"><img alt="NVIDIA" src="assets/logos/nvidia.svg" width="60" height="60"><br><sub>NVIDIA</sub></td>
+    <td><b>AI Infrastructure and Operations Fundamentals</b></td>
   </tr>
   <tr>
-    <td width="44"><img alt="Microsoft" src="assets/logos/microsoft.svg" width="36" height="36"></td>
-    <td><b>Develop a RAG-based Solution with Azure AI Foundry</b><br><sub>Microsoft</sub></td>
+    <td align="center"><img alt="Robert H. Smith School of Business" src="assets/logos/umd-smith.svg" width="60" height="60"><br><sub>Robert H. Smith School of Business</sub></td>
+    <td><b>AI and Career Empowerment</b></td>
   </tr>
   <tr>
-    <td width="44"><img alt="Microsoft" src="assets/logos/microsoft.svg" width="36" height="36"></td>
-    <td><b>Evaluate Generative AI Performance in Azure AI Foundry</b><br><sub>Microsoft</sub></td>
+    <td align="center"><img alt="Microsoft" src="assets/logos/microsoft.svg" width="60" height="60"><br><sub>Microsoft</sub></td>
+    <td><b>Develop a RAG-based Solution with Azure AI Foundry</b></td>
   </tr>
   <tr>
-    <td width="44"><img alt="Digital Workforce Services" src="assets/logos/digital-workforce.svg" width="36" height="36"></td>
-    <td><b>Understanding Agentic AI</b><br><sub>Digital Workforce Services</sub></td>
+    <td align="center"><img alt="Microsoft" src="assets/logos/microsoft.svg" width="60" height="60"><br><sub>Microsoft</sub></td>
+    <td><b>Evaluate Generative AI Performance in Azure AI Foundry</b></td>
   </tr>
   <tr>
-    <td width="44"><img alt="DeepLearning.AI" src="assets/logos/deeplearning-ai.svg" width="36" height="36"></td>
-    <td><b>LangChain for LLM Application Development</b><br><sub>DeepLearning.AI</sub></td>
+    <td align="center"><img alt="Digital Workforce Services" src="assets/logos/digital-workforce.svg" width="60" height="60"><br><sub>Digital Workforce Services</sub></td>
+    <td><b>Understanding Agentic AI</b></td>
   </tr>
   <tr>
-    <td width="44"><img alt="Google Cloud" src="assets/logos/google-cloud.svg" width="36" height="36"></td>
-    <td><b>Prompt Design in Vertex AI</b><br><sub>Google Cloud</sub></td>
+    <td align="center"><img alt="DeepLearning.AI" src="assets/logos/deeplearning-ai.svg" width="60" height="60"><br><sub>DeepLearning.AI</sub></td>
+    <td><b>LangChain for LLM Application Development</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img alt="Google Cloud" src="assets/logos/google-cloud.svg" width="60" height="60"><br><sub>Google Cloud</sub></td>
+    <td><b>Prompt Design in Vertex AI</b></td>
   </tr>
 </table>
 
