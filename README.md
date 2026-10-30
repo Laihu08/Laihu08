@@ -132,6 +132,15 @@
 
 <br>
 
+## Activity
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/isometric-dark.svg">
+  <img alt="Isometric contribution calendar for the last year, updated daily" src="assets/isometric-light.svg" width="100%">
+</picture>
+
+<br>
+
 ## Let's talk
 
 Open to new work. Say hello on [LinkedIn](https://www.linkedin.com/in/rahul-selvaraj) or at [srahul.pk98@gmail.com](mailto:srahul.pk98@gmail.com). More on the [portfolio](https://laihu08.github.io/portfolio/).

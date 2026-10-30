@@ -48,6 +48,10 @@ def shade(hex_, f):
     return "#%02x%02x%02x" % (round(r * f), round(g * f), round(b * f))
 
 
+def days_(n):
+    return f"{n} day" if n == 1 else f"{n} days"
+
+
 def stats(days):
     counts = [d["contributionCount"] for d in days]
     best = max(days, key=lambda d: d["contributionCount"])
@@ -106,11 +110,14 @@ def render(cal, theme):
                 f'text-anchor="{anchor}" letter-spacing="{ls}">{s_}</text>')
 
     # month labels along the front edge
-    last = None
+    last, last_wi = None, -9
     for wi, w in enumerate(weeks[:-1]):
-        m = date.fromisoformat(w["contributionDays"][0]["date"])
+        m = date.fromisoformat(w["contributionDays"][-1]["date"])
         if m.month != last:
             last = m.month
+            if wi - last_wi < 3:
+                continue
+            last_wi = wi
             px, py = P(wi, 7.7)
             out.append(text(px - 4, py + 12, m.strftime("%b"), "JB", 11, t["faint"], "end"))
 
@@ -128,8 +135,8 @@ def render(cal, theme):
     sy = 236
     head.append(f'<line x1="{rx}" y1="{sy}" x2="{W - 70}" y2="{sy}" stroke="{t["line"]}"/>')
     cols = [(f"{best['contributionCount']}", f"Best day · {fmt(date.fromisoformat(best['date']))}"),
-            (f"{longest} days", "Longest streak"),
-            (f"{current} days", "Current streak")]
+            (days_(longest), "Longest streak"),
+            (days_(current), "Current streak")]
     cw = (W - 70 - rx) / 3
     for i, (big, small) in enumerate(cols):
         cx = rx + i * cw + (0 if i == 0 else 18)
