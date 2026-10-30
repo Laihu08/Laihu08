@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg">
-  <img alt="Rahul Selvaraj, Senior AI Engineer. 5+ years of experience, 2 international patents." src="assets/header-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
+  <img alt="Rahul Selvaraj, Senior AI Engineer. 5+ years of experience, 2 international patents." src="assets/hero-light.svg" width="100%">
 </picture>
 
 <p align="center">
@@ -80,16 +80,15 @@
 
 ## Certifications
 
-<sub>
-
-**NVIDIA** · AI Infrastructure and Operations Fundamentals (2026) &nbsp;/&nbsp;
-**Microsoft** · RAG with Azure AI Foundry, Evaluating Generative AI (2025) &nbsp;/&nbsp;
-**DeepLearning.AI** · LangChain for LLM Application Development (2025) &nbsp;/&nbsp;
-**Google Cloud** · Prompt Design in Vertex AI (2025) &nbsp;/&nbsp;
-**Digital Workforce** · Understanding Agentic AI (2025) &nbsp;/&nbsp;
-**UMD Smith School** · AI and Career Empowerment (2026)
-
-</sub>
+| Issuer | Certification | Year |
+|---|---|---|
+| NVIDIA | AI Infrastructure and Operations Fundamentals | 2026 |
+| Robert H. Smith School of Business | AI and Career Empowerment | 2026 |
+| Microsoft | Develop a RAG-based Solution with Azure AI Foundry | 2025 |
+| Microsoft | Evaluate Generative AI Performance in Azure AI Foundry | 2025 |
+| Digital Workforce Services | Understanding Agentic AI | 2025 |
+| DeepLearning.AI | LangChain for LLM Application Development | 2025 |
+| Google Cloud | Prompt Design in Vertex AI | 2025 |
 
 <br>
 

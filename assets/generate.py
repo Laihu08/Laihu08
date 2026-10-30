@@ -120,7 +120,7 @@ PROJECTS = [
 
 os.makedirs(OUT, exist_ok=True)
 for name, th in THEMES.items():
-    open(f"{OUT}/header-{name}.svg", "w").write(header(th))
+    open(f"{OUT}/hero-{name}.svg", "w").write(header(th))
     for p in PROJECTS:
         open(f"{OUT}/card-{p['slug']}-{name}.svg", "w").write(card(th, p))
 print("done", sorted(os.listdir(OUT)))
