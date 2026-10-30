@@ -95,15 +95,36 @@
 
 ## Certifications
 
-| Issuer | Certification | Year |
-|---|---|---|
-| NVIDIA | AI Infrastructure and Operations Fundamentals | 2026 |
-| Robert H. Smith School of Business | AI and Career Empowerment | 2026 |
-| Microsoft | Develop a RAG-based Solution with Azure AI Foundry | 2025 |
-| Microsoft | Evaluate Generative AI Performance in Azure AI Foundry | 2025 |
-| Digital Workforce Services | Understanding Agentic AI | 2025 |
-| DeepLearning.AI | LangChain for LLM Application Development | 2025 |
-| Google Cloud | Prompt Design in Vertex AI | 2025 |
+<table>
+  <tr>
+    <td width="44"><img alt="NVIDIA" src="assets/logos/nvidia.svg" width="36" height="36"></td>
+    <td><b>AI Infrastructure and Operations Fundamentals</b><br><sub>NVIDIA</sub></td>
+  </tr>
+  <tr>
+    <td width="44"><img alt="Robert H. Smith School of Business" src="assets/logos/umd-smith.svg" width="36" height="36"></td>
+    <td><b>AI and Career Empowerment</b><br><sub>Robert H. Smith School of Business</sub></td>
+  </tr>
+  <tr>
+    <td width="44"><img alt="Microsoft" src="assets/logos/microsoft.svg" width="36" height="36"></td>
+    <td><b>Develop a RAG-based Solution with Azure AI Foundry</b><br><sub>Microsoft</sub></td>
+  </tr>
+  <tr>
+    <td width="44"><img alt="Microsoft" src="assets/logos/microsoft.svg" width="36" height="36"></td>
+    <td><b>Evaluate Generative AI Performance in Azure AI Foundry</b><br><sub>Microsoft</sub></td>
+  </tr>
+  <tr>
+    <td width="44"><img alt="Digital Workforce Services" src="assets/logos/digital-workforce.svg" width="36" height="36"></td>
+    <td><b>Understanding Agentic AI</b><br><sub>Digital Workforce Services</sub></td>
+  </tr>
+  <tr>
+    <td width="44"><img alt="DeepLearning.AI" src="assets/logos/deeplearning-ai.svg" width="36" height="36"></td>
+    <td><b>LangChain for LLM Application Development</b><br><sub>DeepLearning.AI</sub></td>
+  </tr>
+  <tr>
+    <td width="44"><img alt="Google Cloud" src="assets/logos/google-cloud.svg" width="36" height="36"></td>
+    <td><b>Prompt Design in Vertex AI</b><br><sub>Google Cloud</sub></td>
+  </tr>
+</table>
 
 <br>
 
