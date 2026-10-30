@@ -124,3 +124,64 @@ for name, th in THEMES.items():
     for p in PROJECTS:
         open(f"{OUT}/card-{p['slug']}-{name}.svg", "w").write(card(th, p))
 print("done", sorted(os.listdir(OUT)))
+
+# ---------- Technology rows: skill-icons tiles + Simple Icons tiles in the same style ----------
+import re, json
+ROOT = os.path.dirname(os.path.abspath(__file__))
+SKILL = os.environ.get("SKILL_ICONS", os.path.join(os.path.dirname(__file__), "skill-icons/icons"))
+SIMPLE = os.path.join(os.path.dirname(__file__), "fonts/node_modules/simple-icons/icons")
+TILE_BG = {"light": "#F4F2ED", "dark": "#242938"}
+_uid = [0]
+
+def skill_tile(name, theme):
+    p = f"{SKILL}/{name}-{theme.capitalize()}.svg"
+    if not os.path.exists(p): p = f"{SKILL}/{name}.svg"
+    src = open(p).read()
+    _uid[0] += 1; pre = f"i{_uid[0]}_"
+    src = re.sub(r'id="([^"]+)"', lambda m: f'id="{pre}{m.group(1)}"', src)
+    src = re.sub(r'url\(#([^)]+)\)', lambda m: f'url(#{pre}{m.group(1)})', src)
+    src = re.sub(r'href="#([^"]+)"', lambda m: f'href="#{pre}{m.group(1)}"', src)
+    inner = re.sub(r'^.*?<svg[^>]*>|</svg>\s*$', '', src, flags=re.S)
+    return inner
+
+def simple_tile(slug, color, theme):
+    d = re.search(r' d="([^"]+)"', open(f"{SIMPLE}/{slug}.svg").read()).group(1)
+    c = color[theme] if isinstance(color, dict) else color
+    return (f'<rect width="256" height="256" rx="60" fill="{TILE_BG[theme]}"/>'
+            f'<g transform="translate(56,56) scale({144/24})"><path d="{d}" fill="{c}"/></g>')
+
+INK = {"light": "#1f1f1f", "dark": "#ffffff"}
+ROWS = {
+    "ai": [("s", "langchain", {"light": "#1C3C3C", "dark": "#7FC8FF"}, "LangChain"),
+           ("s", "langgraph", {"light": "#1C3C3C", "dark": "#7FC8FF"}, "LangGraph"),
+           ("s", "ollama", INK, "Ollama"),
+           ("s", "claude", "#D97757", "Claude"),
+           ("s", "mistralai", "#FA520F", "Mistral"),
+           ("s", "meta", "#0467DF", "LLaMA")],
+    "frameworks": [("k", "PyTorch", None, "PyTorch"), ("k", "TensorFlow", None, "TensorFlow"),
+                   ("s", "keras", "#D00000", "Keras"), ("s", "huggingface", "#FFD21E", "Hugging Face"),
+                   ("k", "OpenCV", None, "OpenCV")],
+    "programming": [("k", "Python", None, "Python"), ("k", "CPP", None, "C++")],
+    "cloud": [("k", "GCP", None, "GCP / Vertex AI"), ("k", "Docker", None, "Docker"),
+              ("k", "Kubernetes", None, "Kubernetes"), ("k", "FastAPI", None, "FastAPI"),
+              ("s", "openapiinitiative", "#6BA539", "REST APIs"), ("s", "githubactions", "#2088FF", "CI/CD")],
+    "tools": [("k", "Git", None, "Git"), ("k", "GitLab", None, "GitLab"),
+              ("k", "VSCode", None, "VS Code"), ("s", "jupyter", "#F37626", "Jupyter")],
+}
+
+def tech_row(items, theme):
+    T, COLW, H = 60, 104, 98
+    W = COLW * len(items)
+    s = SVG(W, H, ", ".join(i[3] for i in items))
+    cap = THEMES[theme]["mute"]
+    for n, (kind, key, color, label) in enumerate(items):
+        x = n * COLW + (COLW - T) / 2
+        inner = skill_tile(key, theme) if kind == "k" else simple_tile(key, color, theme)
+        s.raw(f'<svg x="{x}" y="4" width="{T}" height="{T}" viewBox="0 0 256 256">{inner}</svg>')
+        s.text(n * COLW + COLW / 2, 88, label, "mono", 10.5, cap, "middle")
+    return s.out()
+
+for name in THEMES:
+    for row, items in ROWS.items():
+        open(f"{OUT}/tech-{row}-{name}.svg", "w").write(tech_row(items, name))
+print("tech rows done")

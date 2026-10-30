@@ -68,13 +68,28 @@
 
 ## Technology
 
-| | |
-|---|---|
-| **AI & agents** | LLMs, VLMs, RAG, agentic AI, multi-agent orchestration, prompt engineering, vector databases, evaluation & monitoring |
-| **Frameworks** | <picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=pytorch,tensorflow,opencv&theme=dark"><img alt="PyTorch, TensorFlow, OpenCV" src="https://skillicons.dev/icons?i=pytorch,tensorflow,opencv&theme=light" height="38"></picture> &nbsp;<sub>+ Keras, Hugging Face Transformers, LangChain</sub> |
-| **Programming** | <picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py,cpp&theme=dark"><img alt="Python, C++" src="https://skillicons.dev/icons?i=py,cpp&theme=light" height="38"></picture> |
-| **Cloud & delivery** | <picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=gcp,docker,kubernetes,fastapi&theme=dark"><img alt="Google Cloud, Docker, Kubernetes, FastAPI" src="https://skillicons.dev/icons?i=gcp,docker,kubernetes,fastapi&theme=light" height="38"></picture> &nbsp;<sub>+ Vertex AI, CI/CD, REST APIs</sub> |
-| **Tools** | <picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=git,gitlab,vscode&theme=dark"><img alt="Git, GitLab, VS Code" src="https://skillicons.dev/icons?i=git,gitlab,vscode&theme=light" height="38"></picture> &nbsp;<sub>+ Jupyter</sub> |
+<table>
+  <tr>
+    <td width="150"><b>AI & agents</b></td>
+    <td><picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech-ai-dark.svg"><img alt="LangChain, LangGraph, Ollama, Claude, Mistral, LLaMA" src="assets/tech-ai-light.svg" height="74"></picture><br><sub>LLMs, VLMs, RAG, multi-agent orchestration, prompt engineering, vector databases, evaluation & monitoring</sub></td>
+  </tr>
+  <tr>
+    <td width="150"><b>Frameworks</b></td>
+    <td><picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech-frameworks-dark.svg"><img alt="PyTorch, TensorFlow, Keras, Hugging Face, OpenCV" src="assets/tech-frameworks-light.svg" height="74"></picture></td>
+  </tr>
+  <tr>
+    <td width="150"><b>Programming</b></td>
+    <td><picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech-programming-dark.svg"><img alt="Python, C++" src="assets/tech-programming-light.svg" height="74"></picture></td>
+  </tr>
+  <tr>
+    <td width="150"><b>Cloud & delivery</b></td>
+    <td><picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech-cloud-dark.svg"><img alt="Google Cloud / Vertex AI, Docker, Kubernetes, FastAPI, REST APIs, CI/CD" src="assets/tech-cloud-light.svg" height="74"></picture></td>
+  </tr>
+  <tr>
+    <td width="150"><b>Tools</b></td>
+    <td><picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech-tools-dark.svg"><img alt="Git, GitLab, VS Code, Jupyter" src="assets/tech-tools-light.svg" height="74"></picture></td>
+  </tr>
+</table>
 
 <br>
 
