@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="1200" height="280" role="img" aria-label="Rahul Selvaraj, AI Engineer">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#0d1117" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2f6fed"/>
+      <stop offset="1" stop-color="#6d4fe0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="280" rx="14" fill="#f6f8fa"/>
+  <rect width="1200" height="280" rx="14" fill="url(#grid)"/>
+  <rect x="0.5" y="0.5" width="1199" height="279" rx="13.5" fill="none" stroke="#d0d7de"/>
+
+  <rect x="72" y="62" width="36" height="3" fill="url(#accent)"/>
+  <text x="72" y="96" font-family="'SF Mono','Menlo','Consolas','Liberation Mono',monospace" font-size="13" letter-spacing="2.4" fill="#59636e">AI ENGINEER  /  R&amp;D  /  BIZLINK GROUP  /  TAIWAN</text>
+
+  <text x="72" y="168" font-family="-apple-system,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="66" font-weight="700" letter-spacing="-1.5" fill="#1f2328">Rahul Selvaraj</text>
+
+  <text x="72" y="214" font-family="-apple-system,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="20" fill="#59636e">Applied AI, multi-agent systems and edge IoT.</text>
+
+  <line x1="930" y1="62" x2="930" y2="218" stroke="#d0d7de"/>
+  <text x="962" y="128" font-family="-apple-system,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="64" font-weight="700" fill="url(#accent)">02</text>
+  <text x="964" y="160" font-family="'SF Mono','Menlo','Consolas','Liberation Mono',monospace" font-size="12" letter-spacing="2.4" fill="#59636e">PATENTS HELD</text>
+</svg>
