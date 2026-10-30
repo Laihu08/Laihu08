@@ -101,9 +101,13 @@ def render(cal, theme):
         h = 4 + (v / peak) ** 0.85 * zmax if v else 2
         A, B, C, D = P(x, y, h), P(x + g, y, h), P(x + g, y + g, h), P(x, y + g, h)
         B0, C0, D0 = P(x + g, y), P(x + g, y + g), P(x, y + g)
-        out.append(poly([D, C, C0, D0], shade(base, 0.82)))
-        out.append(poly([C, B, B0, C0], shade(base, 0.68)))
-        out.append(poly([A, B, C, D], base))
+        faces = (poly([D, C, C0, D0], shade(base, 0.82)) + poly([C, B, B0, C0], shade(base, 0.68))
+                 + poly([A, B, C, D], base))
+        if v:  # bars grow up from the floor, in a wave from left to right
+            out.append(f'<g class="b" style="transform-origin:{C0[0]:.1f}px {C0[1]:.1f}px;'
+                       f'animation-delay:{0.25 + x * 0.03:.2f}s">{faces}</g>')
+        else:
+            out.append(faces)
 
     def text(x, y, s_, fam, size, fill, anchor="start", ls=0):
         return (f'<text x="{x:.1f}" y="{y:.1f}" font-family="{fam}" font-size="{size}" fill="{fill}" '
@@ -152,7 +156,10 @@ def render(cal, theme):
         legend.append(f'<rect x="{lx + 44 + i * 18}" y="{ly}" width="13" height="13" rx="3" fill="{c}"/>')
     legend.append(text(lx + 44 + 5 * 18 + 6, ly + 11, "More", "JB", 11, t["faint"]))
 
-    css = font_face("SG", "space-grotesk-600.woff2") + font_face("PR", "poppins-400.woff2") + font_face("JB", "jetbrains-mono-400.woff2")
+    css = ("@keyframes rise{from{transform:scaleY(0.04);opacity:0}to{transform:scaleY(1);opacity:1}}"
+           ".b{animation:rise .9s cubic-bezier(.16,1,.3,1) both}"
+           "@media (prefers-reduced-motion:reduce){.b{animation:none}}")
+    css += font_face("SG", "space-grotesk-600.woff2") + font_face("PR", "poppins-400.woff2") + font_face("JB", "jetbrains-mono-400.woff2")
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" '
             f'aria-label="Isometric contribution calendar: {total} contributions in the last year">'
             f"<style>{css}</style>"
@@ -166,6 +173,9 @@ def main():
         cal = json.load(open(sys.argv[sys.argv.index("--data") + 1]))
     else:
         cal = fetch()
+    os.makedirs(os.path.join(ROOT, "docs"), exist_ok=True)
+    with open(os.path.join(ROOT, "docs", "contributions.json"), "w") as f:
+        json.dump({"user": USER, **cal}, f, separators=(",", ":"))
     for theme in THEMES:
         with open(os.path.join(OUT, f"isometric-{theme}.svg"), "w") as f:
             f.write(render(cal, theme))

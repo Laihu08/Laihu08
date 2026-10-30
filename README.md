@@ -134,7 +134,11 @@
 
 ## Activity
 
+<a href="https://laihu08.github.io/Laihu08/">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/isometric-dark.svg">
   <img alt="Isometric contribution calendar for the last year, updated daily" src="assets/isometric-light.svg" width="100%">
 </picture>
+</a>
+
+<p align="right"><sub><a href="https://laihu08.github.io/Laihu08/">Open interactive view →</a></sub></p>
