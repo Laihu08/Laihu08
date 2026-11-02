@@ -132,6 +132,16 @@
 
 <br>
 
+<!-- oss-contributions:start -->
+## Open-source contributions
+
+| Date | Repository | Issue | Pull request | Status |
+|---|---|---|---|---|
+| 2026-11-02 | [paperclipai/paperclip](https://github.com/paperclipai/paperclip) | [#18565](https://github.com/paperclipai/paperclip/issues/18565) | [#18580](https://github.com/paperclipai/paperclip/pull/18580) | Open |
+<!-- oss-contributions:end -->
+
+<br>
+
 ## Activity
 
 <a href="https://laihu08.github.io/Laihu08/">
