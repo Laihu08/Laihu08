@@ -34,7 +34,7 @@
 | Date | Repository | Issue | Pull request | Status |
 |---|---|---|---|---|
 | 2026-11-03 | [Q00/ouroboros](https://github.com/Q00/ouroboros) | [#2807](https://github.com/Q00/ouroboros/issues/2807) | [#2818](https://github.com/Q00/ouroboros/pull/2818) | Open |
-| 2026-11-03 | [opensandbox-group/OpenSandbox](https://github.com/opensandbox-group/OpenSandbox) | [#2502](https://github.com/opensandbox-group/OpenSandbox/issues/2502) | [#2559](https://github.com/opensandbox-group/OpenSandbox/pull/2559) | Open |
+| 2026-11-03 | [opensandbox-group/OpenSandbox](https://github.com/opensandbox-group/OpenSandbox) | [#2502](https://github.com/opensandbox-group/OpenSandbox/issues/2502) | [#2559](https://github.com/opensandbox-group/OpenSandbox/pull/2559) | Merged |
 | 2026-11-02 | [paperclipai/paperclip](https://github.com/paperclipai/paperclip) | [#18576](https://github.com/paperclipai/paperclip/issues/18576) | [#18589](https://github.com/paperclipai/paperclip/pull/18589) | Open |
 | 2026-11-02 | [paperclipai/paperclip](https://github.com/paperclipai/paperclip) | [#18565](https://github.com/paperclipai/paperclip/issues/18565) | [#18580](https://github.com/paperclipai/paperclip/pull/18580) | Open |
 <!-- oss-contributions:end -->
