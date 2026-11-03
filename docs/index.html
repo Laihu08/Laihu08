@@ -29,6 +29,8 @@
   nav { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:36px; }
   nav a, .toggle { font:12px 'JetBrains Mono', monospace; letter-spacing:1.5px; text-transform:uppercase; color:var(--mute); text-decoration:none; }
   nav a:hover { color:var(--ink); }
+  .navr { display:flex; gap:8px; }
+  .toggle[disabled] { opacity:.55; cursor:default; }
   .toggle { background:var(--card); color:var(--ink); border:1px solid var(--line); border-radius:999px; padding:8px 14px; cursor:pointer; }
   h1 { font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:clamp(30px, 5vw, 48px); letter-spacing:-1px; margin:0; }
   .lede { color:var(--mute); margin:8px 0 28px; font-size:15px; }
@@ -71,7 +73,10 @@
 <main>
   <nav>
     <a href="https://github.com/Laihu08">← GitHub profile</a>
-    <button class="toggle" id="toggle" type="button">Theme</button>
+    <div class="navr">
+      <button class="toggle" id="refresh" type="button" aria-live="polite">Refresh</button>
+      <button class="toggle" id="toggle" type="button">Theme</button>
+    </div>
   </nav>
 
   <h1>Activity</h1>
@@ -227,7 +232,8 @@ function render() {
     [plural(st.longest, 'day'), 'Longest streak'],
     [plural(st.current, 'day'), 'Current streak'],
   ].map(([b, s]) => `<div class="stat"><b>${b}</b><span>${s}</span></div>`).join('');
-  $('updated').textContent = `${plural(st.active, 'active day')} · updated daily`;
+  const when = DATA._fetchedAt ? 'live from GitHub · ' + DATA._fetchedAt.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' }) : 'nightly snapshot';
+  $('updated').textContent = `${plural(st.active, 'active day')} · ${when}`;
   months(days);
   draw();
 }
@@ -239,10 +245,47 @@ $('toggle').addEventListener('click', () => {
 });
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => DATA && draw());
 
-fetch('contributions.json', { cache: 'no-cache' })
-  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-  .then(d => { DATA = d; render(); })
-  .catch(() => { $('iso').outerHTML = '<p class="err">Activity data is not available right now.</p>'; });
+// Live data: GitHub's public contribution calendar via github-contributions-api (no token needed).
+const LEVEL_NAME = ['NONE', 'FIRST_QUARTILE', 'SECOND_QUARTILE', 'THIRD_QUARTILE', 'FOURTH_QUARTILE'];
+async function fetchLive() {
+  const r = await fetch('https://github-contributions-api.jogruber.de/v4/Laihu08?y=last&_=' + Date.now(), { cache: 'no-store' });
+  if (!r.ok) throw new Error(r.status);
+  const j = await r.json();
+  const list = (j.contributions || []).filter(d => d && d.date).sort((a, b) => a.date < b.date ? -1 : 1);
+  if (!list.length) throw new Error('empty');
+  const weeks = []; let cur = null;
+  for (const d of list) {
+    const dow = new Date(d.date + 'T00:00').getDay();
+    if (!cur || dow === 0) { cur = { contributionDays: [] }; weeks.push(cur); }
+    cur.contributionDays.push({ date: d.date, contributionCount: d.count || 0, contributionLevel: LEVEL_NAME[d.level] || 'NONE' });
+  }
+  const total = (j.total && typeof j.total.lastYear === 'number') ? j.total.lastYear : list.reduce((a, d) => a + (d.count || 0), 0);
+  return { totalContributions: total, weeks, _fetchedAt: new Date() };
+}
+async function fetchSnapshot() {
+  const r = await fetch('contributions.json', { cache: 'no-cache' });
+  if (!r.ok) throw new Error(r.status);
+  return r.json();
+}
+const btn = $('refresh');
+async function load(replay) {
+  btn.disabled = true; btn.textContent = 'Refreshing…';
+  let note = '';
+  try { DATA = await fetchLive(); }
+  catch (e) {
+    try {
+      if (DATA && DATA._fetchedAt) note = "Couldn't reach GitHub just now. Showing data from " + DATA._fetchedAt.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+      else { DATA = DATA || await fetchSnapshot(); note = 'Live data unavailable, showing the nightly snapshot'; }
+    }
+    catch (e2) { $('iso').outerHTML = '<p class="err">Activity data is not available right now.</p>'; btn.disabled = false; btn.textContent = 'Refresh'; return; }
+  }
+  if (replay) drawn = false;
+  render();
+  if (note) $('updated').textContent = note;
+  btn.disabled = false; btn.textContent = 'Refresh';
+}
+btn.addEventListener('click', () => load(true));
+load(false);
 </script>
 </body>
 </html>
