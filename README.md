@@ -15,6 +15,31 @@
 
 <br>
 
+## Activity
+
+<a href="https://laihu08.github.io/Laihu08/">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/isometric-dark.svg">
+  <img alt="Isometric contribution calendar for the last year, updated daily" src="assets/isometric-light.svg" width="100%">
+</picture>
+</a>
+
+<p align="right"><sub><a href="https://laihu08.github.io/Laihu08/">Open interactive view →</a></sub></p>
+
+<br>
+
+<!-- oss-contributions:start -->
+## Open-source contributions
+
+| Date | Repository | Issue | Pull request | Status |
+|---|---|---|---|---|
+| 2026-11-03 | [opensandbox-group/OpenSandbox](https://github.com/opensandbox-group/OpenSandbox) | [#2502](https://github.com/opensandbox-group/OpenSandbox/issues/2502) | [#2559](https://github.com/opensandbox-group/OpenSandbox/pull/2559) | Open |
+| 2026-11-02 | [paperclipai/paperclip](https://github.com/paperclipai/paperclip) | [#18576](https://github.com/paperclipai/paperclip/issues/18576) | [#18589](https://github.com/paperclipai/paperclip/pull/18589) | Open |
+| 2026-11-02 | [paperclipai/paperclip](https://github.com/paperclipai/paperclip) | [#18565](https://github.com/paperclipai/paperclip/issues/18565) | [#18580](https://github.com/paperclipai/paperclip/pull/18580) | Open |
+<!-- oss-contributions:end -->
+
+<br>
+
 ## Experience
 
 **01 &nbsp; AI Engineer II, [BizLink](https://www.bizlinktech.com/)** &nbsp;<sub>Aug 2025 – Present · Taiwan</sub>
@@ -129,28 +154,3 @@
     <td><b>Prompt Design in Vertex AI</b></td>
   </tr>
 </table>
-
-<br>
-
-<!-- oss-contributions:start -->
-## Open-source contributions
-
-| Date | Repository | Issue | Pull request | Status |
-|---|---|---|---|---|
-| 2026-11-03 | [opensandbox-group/OpenSandbox](https://github.com/opensandbox-group/OpenSandbox) | [#2502](https://github.com/opensandbox-group/OpenSandbox/issues/2502) | [#2559](https://github.com/opensandbox-group/OpenSandbox/pull/2559) | Open |
-| 2026-11-02 | [paperclipai/paperclip](https://github.com/paperclipai/paperclip) | [#18576](https://github.com/paperclipai/paperclip/issues/18576) | [#18589](https://github.com/paperclipai/paperclip/pull/18589) | Open |
-| 2026-11-02 | [paperclipai/paperclip](https://github.com/paperclipai/paperclip) | [#18565](https://github.com/paperclipai/paperclip/issues/18565) | [#18580](https://github.com/paperclipai/paperclip/pull/18580) | Open |
-<!-- oss-contributions:end -->
-
-<br>
-
-## Activity
-
-<a href="https://laihu08.github.io/Laihu08/">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/isometric-dark.svg">
-  <img alt="Isometric contribution calendar for the last year, updated daily" src="assets/isometric-light.svg" width="100%">
-</picture>
-</a>
-
-<p align="right"><sub><a href="https://laihu08.github.io/Laihu08/">Open interactive view →</a></sub></p>
