@@ -31,6 +31,8 @@
 <!-- oss-contributions:start -->
 ## Open-source contributions
 
+<p><img src="https://img.shields.io/badge/Pull_requests-12-0969da?style=for-the-badge" alt="12 pull requests">&nbsp;<img src="https://img.shields.io/badge/Merged-3-8250df?style=for-the-badge" alt="3 merged">&nbsp;<img src="https://img.shields.io/badge/Open-9-1f883d?style=for-the-badge" alt="9 open">&nbsp;<img src="https://img.shields.io/badge/Projects-9-57606a?style=for-the-badge" alt="9 projects"></p>
+
 <table>
 <tr><th>Project</th><th>Issue</th><th>Fix</th><th>Status</th></tr>
 <tr><td align="center" width="170"><a href="https://github.com/wshobson/agents"><img src="https://github.com/wshobson.png?size=128" width="64" height="64" alt="wshobson logo"><br><b>agents</b></a><br><img src="https://img.shields.io/github/stars/wshobson/agents?style=social" alt="GitHub stars"></td><td>Quoted code in notes was misread as normal text<br><sub>Issue <a href="https://github.com/wshobson/agents/issues/813">#813</a></sub></td><td>Read how deeply each line is quoted, like Markdown does<br><sub><a href="https://github.com/wshobson/agents/pull/823">PR #823</a> · 2026-11-11</sub></td><td align="center"><a href="https://github.com/wshobson/agents/pull/823"><img src="https://img.shields.io/badge/Open-1f883d?style=for-the-badge" alt="Open"></a></td></tr>
