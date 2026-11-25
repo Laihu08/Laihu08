@@ -31,7 +31,7 @@
 <!-- oss-contributions:start -->
 ## Open-source contributions
 
-<p><img src="https://img.shields.io/badge/Pull_requests-22-0969da?style=for-the-badge" alt="22 pull requests">&nbsp;<img src="https://img.shields.io/badge/Merged-11-8250df?style=for-the-badge" alt="11 merged">&nbsp;<img src="https://img.shields.io/badge/Open-11-1f883d?style=for-the-badge" alt="11 open">&nbsp;<img src="https://img.shields.io/badge/Projects-17-57606a?style=for-the-badge" alt="17 projects">&nbsp;<a href="https://github.com/Laihu08"><img src="https://img.shields.io/badge/Contributions_(last_year)-583-f78166?style=for-the-badge" alt="583 contributions in the last year"></a>&nbsp;<a href="https://ossinsight.io/analyze/Laihu08"><img src="https://img.shields.io/badge/OSS_Insight-Analytics-e30c5c?style=for-the-badge" alt="OSS Insight analytics"></a></p>
+<p><img src="https://img.shields.io/badge/Pull_requests-22-0969da?style=for-the-badge" alt="22 pull requests">&nbsp;<img src="https://img.shields.io/badge/Merged-11-8250df?style=for-the-badge" alt="11 merged">&nbsp;<img src="https://img.shields.io/badge/Open-11-1f883d?style=for-the-badge" alt="11 open">&nbsp;<img src="https://img.shields.io/badge/Projects-17-57606a?style=for-the-badge" alt="17 projects">&nbsp;<a href="https://github.com/Laihu08"><img src="https://img.shields.io/badge/Contributions_(last_year)-585-f78166?style=for-the-badge" alt="585 contributions in the last year"></a></p>
 
 <table>
 <tr><th>Project</th><th>Issue</th><th>Fix</th><th>Status</th></tr>
